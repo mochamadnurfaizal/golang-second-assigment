@@ -2,21 +2,15 @@
 
 Developed by Moch Nurfaizal
 
-Setting Database :
-1. Cek File /config/db.go
-2. Setting Username, Password, Port, DB Name dan Host tersedia pada Constant
+Setting .env anda
 
-Setting Port :
-1. Cek File main.go
-2. Setting Port tersedia pada Global Variable
-
-Contoh Port :
-PPGHOST = "127.0.0.1"
-PGPORT = "5432"
-PGUSER = "postgres"
-PGPASSWORD = "postgres"
-PGDBNAME = "second-assignment"
-PORTAPP = "8088"
+Contoh .env :
+- PGHOST = "127.0.0.1"
+- PGPORT = "5432"
+- PGUSER = "postgres"
+- PGPASSWORD = "postgres"
+- PGDBNAME = "second-assignment"
+- PORTAPP = "8088"
 
 Cara Menggunakan :
 1. Clone Project
