@@ -4,13 +4,20 @@ import (
 	"golang-second-assigment/config"
 	"golang-second-assigment/controllers"
 	"net/http"
+	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
 )
 
-var PORT = ":8088"
+var PORT = os.Getenv("PORT")
 
 func main() {
+	err := godotenv.Load(".env")
+	if err != nil {
+		panic(err)
+	}
+	PORT = os.Getenv("PORT")
 	config.ConnectGorm()
 	config.StartingApps()
 
