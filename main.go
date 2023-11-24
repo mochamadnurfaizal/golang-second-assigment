@@ -10,14 +10,14 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-var PORT = os.Getenv("PORT")
+var PORT = os.Getenv("PORTAPP")
 
 func main() {
 	err := godotenv.Load(".env")
 	if err != nil {
 		panic(err)
 	}
-	PORT = os.Getenv("PORT")
+	PORT = ":" + os.Getenv("PORTAPP")
 	config.ConnectGorm()
 	config.StartingApps()
 
